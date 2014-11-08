@@ -88,10 +88,12 @@ void setup()
   // Do not start until we get a valid time reference
   // for slotted transmissions.
   if (APRS_SLOT >= 0) {
+#ifdef XXX
     do {
       while (! Serial.available())
         power_save();
     } while (! gps_decode(Serial.read()));
+#endif
     
     next_aprs = millis() + 1000 *
       (APRS_PERIOD - (gps_seconds + APRS_PERIOD - APRS_SLOT) % APRS_PERIOD);
@@ -126,11 +128,11 @@ void loop()
 {
   // Time for another APRS frame
   if ((int32_t) (millis() - next_aprs) >= 0) {
-    get_pos();
+    //get_pos();
     aprs_send();
     next_aprs += APRS_PERIOD * 1000L;
-    while (afsk_busy()) ;
-      power_save();
+    //while (afsk_busy()) ;
+      //power_save();
 
 #ifdef DEBUG_MODEM
     // Show modem ISR stats from the previous transmission

@@ -83,7 +83,7 @@
 // 00:02:00, etc. amd the second balloon will transmit at 00:00:30, 00:01:30,
 // 00:02:30, etc.
 #define APRS_SLOT     0     // seconds. -1 disables slotted transmissions
-#define APRS_PERIOD   60    // seconds
+#define APRS_PERIOD   5    // seconds
 
 // GPS baud rate (in bits per second). This is also the baud rate at which
 // debug data will be printed out the serial port.
@@ -203,9 +203,9 @@
 //    will get errors.
 
 // #define DEBUG_GPS    // GPS sentence dump and checksum validation
-// #define DEBUG_AX25   // AX.25 frame dump
-// #define DEBUG_MODEM  // Modem ISR overrun and profiling
-// #define DEBUG_RESET  // AVR reset
+#define DEBUG_AX25   // AX.25 frame dump
+#define DEBUG_MODEM  // Modem ISR overrun and profiling
+#define DEBUG_RESET  // AVR reset
 // #define DEBUG_SENS   // Sensors
 
 
