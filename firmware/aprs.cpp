@@ -20,7 +20,6 @@
 #include "gps.h"
 #include "aprs.h"
 #include "sensors_avr.h"
-#include "sensors_pic32.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <WProgram.h>

@@ -30,7 +30,6 @@
 
 #include "config.h"
 #include "afsk_avr.h"
-#include "afsk_pic32.h"
 #include "pin.h"
 #include "radio_dmo.h"
 #include <WProgram.h>

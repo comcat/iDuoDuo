@@ -27,4 +27,4 @@ ISR(TIMER2_OVF_vect)
   afsk_isr();
 }
 
-#endif // ifdef PIC32MX
+#endif

@@ -1,8 +1,6 @@
 Version 1.4 - 2012/08/26
 ------------------------
 
- * NEW: Support for PIC32 / Chipkit Uno32 platform
-
  * NEW: Support for active or passive buzzers (DC or PWM driven)
 
  * NEW: Battery voltage sensing
