@@ -32,7 +32,7 @@
 #include "afsk_avr.h"
 #include "afsk_pic32.h"
 #include "pin.h"
-#include "radio_hx1.h"
+#include "radio_dmo.h"
 #include <WProgram.h>
 #include <stdint.h>
 
@@ -61,7 +61,7 @@ volatile static unsigned char slow_sample_in_baud;
 #endif
 
 // The radio (class defined in config.h)
-static RadioHx1 radio;
+static RadioDMO radio;
 
 volatile static unsigned int afsk_packet_size = 0;
 volatile static const uint8_t *afsk_packet;
