@@ -39,8 +39,8 @@
 // - Cars:       9
 // - Home:       0
 // - IGate:      5
-#define S_CALLSIGN      "MYCALL"
-#define S_CALLSIGN_ID   11
+#define S_CALLSIGN		"DUODUO"
+#define S_CALLSIGN_ID	9
 
 // Destination callsign: APRS (with SSID=0) is usually okay.
 #define D_CALLSIGN      "APRS"
