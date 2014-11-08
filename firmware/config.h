@@ -105,7 +105,10 @@
 // --------------------------------------------------------------------------
 
 // This is the PTT pin
-#define PTT_PIN           4
+#define PTT_PIN         4
+
+// use the TX PIN to send the AT cmd to Radio module
+#define RF_RX_PIN		1		
 
 // --------------------------------------------------------------------------
 // Sensors config (sensors.cpp)
