@@ -27,6 +27,9 @@ void RadioDMO::setup()
   pin_write(PTT_PIN, HIGH);
   pinMode(AUDIO_PIN, OUTPUT);
 
+  pinMode(PD_PIN, OUTPUT);
+  pin_write(PD_PIN, HIGH);
+
   //set_freq(144.6400);
   Serial.println("AT+DMOSETGROUP=0,144.6400,144.6400,0,3,0");
 }
@@ -47,4 +50,9 @@ void RadioDMO::set_freq(float f)
 	//String freq = float2str(f);
     //String cmd = "AT+DMOSETGROUP=0," + freq + "," + freq + ",0,3,0";
     //serial.println(cmd);
+}
+
+void RadioDMO::radio_sleep()
+{
+  pin_write(PD_PIN, LOW);
 }

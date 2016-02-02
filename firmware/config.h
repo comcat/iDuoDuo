@@ -104,8 +104,9 @@
 // Radio config (radio_dmo.cpp)
 // --------------------------------------------------------------------------
 
-// This is the PTT pin
+// This is the PTT (RF TX) and PD (sleep ctrl) pin
 #define PTT_PIN         4
+#define PD_PIN			12
 
 // use the TX PIN to send the AT cmd to Radio module
 #define RF_RX_PIN		1		
@@ -182,7 +183,7 @@
 #define BUZZER_ALTITUDE         3000.0  // meters (1 ft = 0.3048 m)
 
 // The options here are pin 9 or 10
-#define BUZZER_PIN              9
+#define BUZZER_PIN              10
 
 // --------------------------------------------------------------------------
 // Debug
@@ -205,9 +206,9 @@
 // 3. When flashing the firmware, disconnect the GPS from the RX pin or you
 //    will get errors.
 
-// #define DEBUG_GPS    // GPS sentence dump and checksum validation
+//#define DEBUG_GPS    // GPS sentence dump and checksum validation
 #define DEBUG_AX25   // AX.25 frame dump
-#define DEBUG_MODEM  // Modem ISR overrun and profiling
+//#define DEBUG_MODEM  // Modem ISR overrun and profiling
 #define DEBUG_RESET  // AVR reset
 // #define DEBUG_SENS   // Sensors
 
