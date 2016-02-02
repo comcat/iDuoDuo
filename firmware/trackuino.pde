@@ -58,11 +58,19 @@ static const uint32_t VALID_POS_TIMEOUT = 2000;  // ms
 // Module variables
 static int32_t next_aprs = 0;
 
+void power_on()
+{
+	pin_write(9, HIGH);
+}
 
 void setup()
 {
-  //pinMode(LED_PIN, OUTPUT);
-  //pin_write(LED_PIN, LOW);
+  pinMode(8, INPUT);
+  pinMode(9, OUTPUT);
+
+  if(digitalRead(8) == 0) {
+  	power_on();
+  }
 
   Serial.begin(GPS_BAUDRATE);
 #ifdef DEBUG_RESET
@@ -72,7 +80,7 @@ void setup()
   buzzer_setup();
   afsk_setup();
   gps_setup();
-  sensors_setup();
+  //sensors_setup();
 
 #ifdef DEBUG_SENS
   Serial.print("Ti=");
