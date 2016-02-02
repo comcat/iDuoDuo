@@ -26,6 +26,7 @@ class RadioDMO : public Radio {
     virtual void ptt_on();
     virtual void ptt_off();
     void set_freq(float f);
+    void radio_sleep();
 };
 
 #endif
