@@ -61,8 +61,8 @@ static int32_t next_aprs = 0;
 
 void setup()
 {
-  pinMode(LED_PIN, OUTPUT);
-  pin_write(LED_PIN, LOW);
+  //pinMode(LED_PIN, OUTPUT);
+  //pin_write(LED_PIN, LOW);
 
   Serial.begin(GPS_BAUDRATE);
 #ifdef DEBUG_RESET
