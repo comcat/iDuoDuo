@@ -6,6 +6,15 @@ iGoGo - Pet APRS Tracker
 [*iGoGo Board*](http://jackslab.org/)
 
 
+Features
+-------------------
+* ATMEGA328p MCU, Arduino compatible
+* 1W VHF radio module
+* mini GPS module
+* 18650 power supply
+* Open Source hardware and firmware 
+
+
 Repository Contents
 -------------------
 * hardware/ - All Eagle design files (.brd, .sch) and Gerber files of iGoGo Board 
