@@ -1,18 +1,10 @@
-How to compile the Trackuino firmware:
---------------------------------------
+How to compile the firmware:
+---------------------------------
 
-1. Copy the "trackuino" folder into your Arduino sketches folder.
+1. Launch the Arduino IDE(arduino-0022) and open up the firmware.pde
 
-2. Launch the Arduino IDE and open up the sketch. You need version 23 of the
-Arduino IDE.
-
-3. Locate the "config.h" tab and replace settings with your own (YOUR CALLSIGN
+2. Locate the "config.h" tab and replace settings with your own (YOUR CALLSIGN
    GOES THERE).
 
-4. When uploading the firmware, unplug the GPS or flashing will fail with an
+3. When uploading the firmware, unplug the GPS or flashing will fail with an
 error.
-
-Stay up-to-date at:
-
-http://code.google.com/p/trackuino
-
