@@ -10,6 +10,8 @@ Features
 -------------------
 * ATMEGA328p MCU, Arduino compatible
 * 1W VHF radio module
+* 1200 bauds AFSK using 8-bit PWM
+* Sends out standard APRS position messages
 * mini GPS module
 * 18650 power supply
 * Open Source hardware and firmware 
