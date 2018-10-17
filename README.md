@@ -17,6 +17,19 @@ Features
 * Open Source hardware and firmware 
 
 
+Pin map
+-------------------
+iGoGo board
+
+* D3 is the audio out pin
+* D4 is the PTT pin
+* D12 is the PD pin of radio module
+* D13 is the PWR_CTRL pin of the radio module
+
+* D8 is the power on input pin
+* D9 is the power on output pin
+
+
 Repository Contents
 -------------------
 * hardware/ - All Eagle design files (.brd, .sch) and Gerber files of iGoGo Board 
