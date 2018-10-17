@@ -8,3 +8,5 @@ How to compile the firmware:
 
 3. When uploading the firmware, unplug the GPS or flashing will fail with an
 error.
+
+http://github.com/trackuino
