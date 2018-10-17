@@ -63,8 +63,20 @@ void power_on()
 	pin_write(9, HIGH);
 }
 
+void gps_power_on()
+{
+  pin_write(7, HIGH);
+  delay(100);
+}
+
+void gps_power_off()
+{
+  pin_write(7, LOW);
+}
+
 void setup()
 {
+  pinMode(7, OUTPUT);
   pinMode(8, INPUT);
   pinMode(9, OUTPUT);
 
@@ -90,16 +102,19 @@ void setup()
   Serial.print(", Vin=");
   Serial.println(sensors_vin());
 #endif
-
+  
   // Do not start until we get a valid time reference
   // for slotted transmissions.
   if (APRS_SLOT >= 0) {
-#ifdef XXX
+
+    gps_power_on();
+    
     do {
       while (! Serial.available())
         power_save();
     } while (! gps_decode(Serial.read()));
-#endif
+
+    gps_power_off();
     
     next_aprs = millis() + 1000 *
       (APRS_PERIOD - (gps_seconds + APRS_PERIOD - APRS_SLOT) % APRS_PERIOD);
@@ -115,6 +130,9 @@ void get_pos()
 {
   // Get a valid position from the GPS
   int valid_pos = 0;
+
+  gps_power_on();
+
   uint32_t timeout = millis();
   do {
     if (Serial.available())
@@ -128,13 +146,15 @@ void get_pos()
       buzzer_on();
     }
   }
+
+  gps_power_off();
 }
 
 void loop()
 {
   // Time for another APRS frame
   if ((int32_t) (millis() - next_aprs) >= 0) {
-    //get_pos();
+    get_pos();
     aprs_send();
     next_aprs += APRS_PERIOD * 1000L;
     //while (afsk_busy()) ;
