@@ -5,6 +5,8 @@ iDuoDuo - Pet APRS Tracker
 
 ![My DuoDuo](doc/iDuoDuo.jpg)
 
+More photo of My DuoDuo :) ![My DuoDuo Life](http://comcat.lofter.com/tag/%E5%A4%9A%E5%A4%9A)
+
 ![iDuoDuo prototype](doc/iDuoDuo-00.jpg)
 
 ![iDuoDuo V0.4](doc/iDuoDuo-01.jpg)
