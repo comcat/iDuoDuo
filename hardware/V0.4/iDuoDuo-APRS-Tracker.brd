@@ -192,8 +192,8 @@
 <text x="62.5348" y="1.1684" size="0.8128" layer="22" font="vector" ratio="16" rot="MR0">C5</text>
 <text x="33.0708" y="25.0698" size="0.8128" layer="21" font="vector" ratio="16">VCC</text>
 <text x="17.653" y="25.0444" size="0.8128" layer="21" font="vector" ratio="16">DTR</text>
-<text x="26.3652" y="14.732" size="3.81" layer="21" font="vector" ratio="16">iGoGo</text>
-<text x="77.1652" y="19.812" size="3.81" layer="22" font="vector" ratio="16" rot="MR0">iGoGo</text>
+<text x="24.3652" y="14.732" size="3.81" layer="21" font="vector" ratio="16">iDuoDuo</text>
+<text x="77.1652" y="19.812" size="3.81" layer="22" font="vector" ratio="16" rot="MR0">iDuoDuo</text>
 <text x="77.2824" y="13.478" size="0.8128" layer="21" font="vector" ratio="16">SC1</text>
 <text x="76.3642" y="6.476" size="1.016" layer="22" font="vector" ratio="16" rot="MR0">By Jack Tan V0.4</text>
 </plain>
