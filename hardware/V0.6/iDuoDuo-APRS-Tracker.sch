@@ -66,6 +66,8 @@
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
+<layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -91,8 +93,12 @@
 <layer number="112" name="Black" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="113" name="WhiteOver" color="0" fill="1" visible="yes" active="yes"/>
 <layer number="114" name="BlackOver" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="115" name="FRNTMAAT2" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="9" fill="4" visible="no" active="yes"/>
+<layer number="117" name="BACKMAAT1" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="118" name="Rect_Pads" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="119" name="KAP_TEKEN" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="120" name="KAP_MAAT1" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="no" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="no" active="yes"/>
 <layer number="123" name="tTestmark" color="7" fill="1" visible="yes" active="yes"/>
@@ -102,9 +108,17 @@
 <layer number="127" name="_tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="128" name="_bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="129" name="Mask" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="130" name="SMDSTROOK" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="131" name="prix" color="7" fill="1" visible="no" active="yes"/>
 <layer number="132" name="test" color="7" fill="1" visible="no" active="yes"/>
+<layer number="133" name="bottom_silk" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="134" name="silk_top" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="135" name="silk_bottom" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="136" name="silktop" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="137" name="silkbottom" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="no" active="yes"/>
+<layer number="145" name="DrillLegend_01-16" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="146" name="DrillLegend_01-20" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="150" name="Notes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="no" active="yes"/>
 <layer number="152" name="_bDocu" color="7" fill="1" visible="yes" active="yes"/>
@@ -3181,18 +3195,15 @@ Manufacturer: Hirose&lt;br&gt;&lt;br&gt;
 </package>
 <package name="SOT23">
 <description>&lt;b&gt;SOT-23&lt;/b&gt;</description>
-<wire x1="1.4224" y1="0.6604" x2="1.4224" y2="-0.6604" width="0.1524" layer="51"/>
-<wire x1="1.4224" y1="-0.6604" x2="-1.4224" y2="-0.6604" width="0.1524" layer="51"/>
-<wire x1="-1.4224" y1="-0.6604" x2="-1.4224" y2="0.6604" width="0.1524" layer="51"/>
-<wire x1="-1.4224" y1="0.6604" x2="1.4224" y2="0.6604" width="0.1524" layer="51"/>
-<smd name="3" x="0" y="1.1" dx="1" dy="1.4" layer="1"/>
-<smd name="2" x="0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
-<smd name="1" x="-0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
-<text x="-0.889" y="2.032" size="0.4064" layer="25">&gt;NAME</text>
-<text x="-1.016" y="-0.1905" size="0.4064" layer="27">&gt;VALUE</text>
-<rectangle x1="-0.2286" y1="0.7112" x2="0.2286" y2="1.2954" layer="51"/>
-<rectangle x1="0.7112" y1="-1.2954" x2="1.1684" y2="-0.7112" layer="51"/>
-<rectangle x1="-1.1684" y1="-1.2954" x2="-0.7112" y2="-0.7112" layer="51"/>
+<smd name="3" x="0" y="1.1" dx="0.8" dy="0.9" layer="1"/>
+<smd name="2" x="0.95" y="-1" dx="0.8" dy="0.9" layer="1"/>
+<smd name="1" x="-0.95" y="-1" dx="0.8" dy="0.9" layer="1"/>
+<wire x1="-0.8" y1="0.7" x2="-1.4" y2="0.7" width="0.2032" layer="21"/>
+<wire x1="-1.4" y1="0.7" x2="-1.4" y2="-0.1" width="0.2032" layer="21"/>
+<wire x1="0.8" y1="0.7" x2="1.4" y2="0.7" width="0.2032" layer="21"/>
+<wire x1="1.4" y1="0.7" x2="1.4" y2="-0.1" width="0.2032" layer="21"/>
+<text x="-0.9271" y="0.1016" size="0.4064" layer="25" font="vector">&gt;NAME</text>
+<text x="-0.9652" y="-0.4953" size="0.4064" layer="27" font="vector">&gt;VALUE</text>
 </package>
 <package name="SMA-DIODE">
 <description>&lt;B&gt;Diode&lt;/B&gt;&lt;p&gt;
@@ -8570,7 +8581,7 @@ Source: http://www.osram.convergy.de/</description>
 <part name="R9" library="ehl" deviceset="0603-RESISTOR" device="" value="10K"/>
 <part name="GND10" library="digital-toy" deviceset="GND" device=""/>
 <part name="Q3" library="ehl" deviceset="MOSFET-P" device="-SOT23" value="SI2301"/>
-<part name="Q4" library="ehl" deviceset="MOSFET-N" device="-SMD" value="SI2302"/>
+<part name="Q4" library="ehl" deviceset="MOSFET-P" device="-SOT23" value="SI2301"/>
 <part name="R10" library="ehl" deviceset="0603-RESISTOR" device="" value="1M"/>
 <part name="D3" library="ehl" deviceset="DIODE" device="SOD"/>
 <part name="D4" library="ehl" deviceset="DIODE" device="SOD"/>
@@ -8640,7 +8651,7 @@ Source: http://www.osram.convergy.de/</description>
 <instance part="R9" gate="G$1" x="139.7" y="93.98" rot="R90"/>
 <instance part="GND10" gate="1" x="139.7" y="73.66"/>
 <instance part="Q3" gate="G$1" x="193.04" y="104.14" rot="MR90"/>
-<instance part="Q4" gate="G$1" x="271.78" y="86.36" rot="R90"/>
+<instance part="Q4" gate="G$1" x="269.24" y="81.28"/>
 <instance part="R10" gate="G$1" x="185.42" y="93.98" rot="R180"/>
 <instance part="D3" gate="G$1" x="185.42" y="78.74" rot="R180"/>
 <instance part="D4" gate="G$1" x="185.42" y="71.12" rot="R180"/>
@@ -8851,11 +8862,6 @@ Source: http://www.osram.convergy.de/</description>
 <pinref part="V3" gate="G$1" pin="VCC"/>
 </segment>
 <segment>
-<pinref part="Q4" gate="G$1" pin="D"/>
-<wire x1="266.7" y1="86.36" x2="248.92" y2="86.36" width="0.1524" layer="91"/>
-<label x="248.92" y="86.36" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="Q3" gate="G$1" pin="D"/>
 <wire x1="198.12" y1="104.14" x2="215.9" y2="104.14" width="0.1524" layer="91"/>
 <label x="210.82" y="104.14" size="1.778" layer="95"/>
@@ -8864,6 +8870,11 @@ Source: http://www.osram.convergy.de/</description>
 <pinref part="JP1" gate="G$1" pin="5"/>
 <wire x1="314.96" y1="45.72" x2="289.56" y2="45.72" width="0.1524" layer="91"/>
 <label x="292.1" y="45.72" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="Q4" gate="G$1" pin="S"/>
+<wire x1="269.24" y1="76.2" x2="269.24" y2="63.5" width="0.1524" layer="91"/>
+<label x="266.7" y="60.96" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="A0" class="0">
@@ -8947,8 +8958,8 @@ Source: http://www.osram.convergy.de/</description>
 </segment>
 <segment>
 <pinref part="Q4" gate="G$1" pin="G"/>
-<wire x1="271.78" y1="78.74" x2="271.78" y2="68.58" width="0.1524" layer="91"/>
-<label x="269.24" y="68.58" size="1.778" layer="95"/>
+<wire x1="261.62" y1="81.28" x2="251.46" y2="81.28" width="0.1524" layer="91"/>
+<label x="248.92" y="83.82" size="1.778" layer="95" rot="R270"/>
 </segment>
 </net>
 <net name="D8" class="0">
@@ -9216,14 +9227,6 @@ Source: http://www.osram.convergy.de/</description>
 <wire x1="124.46" y1="101.6" x2="116.84" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="PWR_GPS" class="0">
-<segment>
-<pinref part="GPS1" gate="G$1" pin="VCC"/>
-<wire x1="312.42" y1="86.36" x2="276.86" y2="86.36" width="0.1524" layer="91"/>
-<label x="292.1" y="86.36" size="1.778" layer="95"/>
-<pinref part="Q4" gate="G$1" pin="S"/>
-</segment>
-</net>
 <net name="VIN" class="0">
 <segment>
 <pinref part="Q2" gate="G$1" pin="S"/>
@@ -9286,6 +9289,14 @@ Source: http://www.osram.convergy.de/</description>
 <wire x1="299.72" y1="101.6" x2="299.72" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="SC1" gate="G$1" pin="+"/>
 <wire x1="299.72" y1="109.22" x2="289.56" y2="109.22" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="GPS_PWR" class="0">
+<segment>
+<pinref part="GPS1" gate="G$1" pin="VCC"/>
+<pinref part="Q4" gate="G$1" pin="D"/>
+<wire x1="312.42" y1="86.36" x2="269.24" y2="86.36" width="0.1524" layer="91"/>
+<label x="289.56" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
