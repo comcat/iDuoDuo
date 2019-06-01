@@ -49,9 +49,8 @@ Repository Contents
 
 Product Versions
 ----------------
-* [IDuoDuo-001](http://www.jackslab.org/) - Bare pcb.
-* [IDuoDuo-002](http://www.jackslab.org/) - Geek Kit. Bare pcb plus chips, stackable headers, indicator LEDs, push buttons and resistors ...
-* [IDuoDuo-003](http://www.jackslab.org/) - Complete iDuoDuo board.
+* [IDuoDuo-V0.4](hardware/V0.4/) - Stupid bug of the S1 key package.
+* [IDuoDuo-V0.6](hardware/V0.6/) - work OK.
 
 
 License Information
