@@ -48,6 +48,7 @@
 #c:/Users/Jack/Documents/arduino-1.8.7-windows/hardware/tools/avr/bin/avrdude.exe -V -F -C /c/Users/Jack/Documents/arduino-1.8.7-windows/hardware/tools/avr/etc/avrdude.conf -c arduino -p atmega328p -P COM7 -c stk500v1 -b 57600 -D -U flash:w:applet/firmware.hex
 
 PORT = COM7
+UPLOAD_RATE = 57600
 
 TARGET := $(shell pwd | sed 's|.*/\(.*\)|\1|')
 
@@ -102,7 +103,6 @@ MCU = atmega328p
 F_CPU = 16000000
 
 FORMAT = ihex
-UPLOAD_RATE = 19200
 
 # Name of this Makefile (used for "make depend").
 MAKEFILE = Makefile
@@ -137,11 +137,16 @@ LDFLAGS =
 
 
 # Programming support using avrdude. Settings and variables.
-AVRDUDE_PROGRAMMER = stk500
+AVRDUDE_PROGRAMMER = stk500v1
 AVRDUDE_PORT = $(PORT)
 AVRDUDE_WRITE_FLASH = -U flash:w:applet/$(TARGET).hex
-AVRDUDE_FLAGS = -F -p $(MCU) -P $(AVRDUDE_PORT) -c $(AVRDUDE_PROGRAMMER) \
-  -b $(UPLOAD_RATE) -q -V -C $(ARDUINO)/hardware/tools/avr/etc/avrdude.conf
+
+AVRDUDE_FLAGS = 	\
+  -V -F -C $(ARDUINO)/hardware/tools/avr/etc/avrdude.conf	\
+  -p $(MCU) -P $(AVRDUDE_PORT) -c $(AVRDUDE_PROGRAMMER) \
+  -b $(UPLOAD_RATE) -D 
+
+#c:/Users/Jack/Documents/arduino-1.8.7-windows/hardware/tools/avr/bin/avrdude.exe -V -F -C /c/Users/Jack/Documents/arduino-1.8.7-windows/hardware/tools/avr/etc/avrdude.conf -c arduino -p atmega328p -P COM7 -c stk500v1 -b 57600 -D -U flash:w:applet/firmware.hex
 
 # Program settings
 ARDUINO_AVR_BIN = $(ARDUINO_TOOLS)/avr/bin
@@ -245,12 +250,11 @@ applet/$(TARGET).elf: applet/$(TARGET).cpp $(OBJ)
 	$(CC) $(ALL_CFLAGS) $(OBJ) -lm --output $@ $(LDFLAGS)
 #	$(CC) $(ALL_CFLAGS) $(OBJ) $(ARDUINO_TOOLS)/avr/avr/lib/avr5/crtm168.o --output $@ $(LDFLAGS)
 
-# Program the device.  
 upload: applet/$(TARGET).hex
 	$(AVRDUDE) $(AVRDUDE_FLAGS) $(AVRDUDE_WRITE_FLASH)
 
-
-pd_test: build pd_close_serial upload
+flash: applet/$(TARGET).hex
+	$(AVRDUDE) $(AVRDUDE_FLAGS) $(AVRDUDE_WRITE_FLASH)
 
 # Target: clean project.
 clean:
