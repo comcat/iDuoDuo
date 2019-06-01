@@ -51,7 +51,7 @@ Repository Contents
 
 Product Versions
 ----------------
-* [IDuoDuo-V0.4](hardware/V0.4/) - Stupid bug of the S1 key package.
+* [IDuoDuo-V0.4](hardware/V0.4/) - Stupid bug of the S1 key package. 2016/02/09
 * [IDuoDuo-V0.6](hardware/V0.6/) - work OK.
 
 
