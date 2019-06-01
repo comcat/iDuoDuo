@@ -17,7 +17,10 @@
 #ifdef AVR
 
 #include <avr/io.h>
+
+//#define __PROG_TYPES_COMPAT__
 #include <avr/pgmspace.h>
+
 #include "config.h"
 #include "afsk_avr.h"
 
@@ -39,7 +42,7 @@
 // This procudes a "warning: only initialized variables can be placed into
 // program memory area", which can be safely ignored:
 // http://gcc.gnu.org/bugzilla/show_bug.cgi?id=34734
-PROGMEM extern const prog_uchar afsk_sine_table[512] = {
+extern const unsigned char afsk_sine_table[512] __ATTR_PROGMEM__ = {
   127, 129, 130, 132, 133, 135, 136, 138, 139, 141, 143, 144, 146, 147, 149, 150, 152, 153, 155, 156, 158, 
   159, 161, 163, 164, 166, 167, 168, 170, 171, 173, 174, 176, 177, 179, 180, 182, 183, 184, 186, 187, 188, 
   190, 191, 193, 194, 195, 197, 198, 199, 200, 202, 203, 204, 205, 207, 208, 209, 210, 211, 213, 214, 215, 

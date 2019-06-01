@@ -21,7 +21,10 @@
 #define __AFSK_AVR_H__
 
 #include <stdint.h>
+
+//#define __PROG_TYPES_COMPAT__
 #include <avr/pgmspace.h>
+
 #include "config.h"
 
 // Exported consts
@@ -31,7 +34,7 @@ extern const uint16_t TABLE_SIZE;
 extern const uint32_t PLAYBACK_RATE;
 
 // Exported vars
-extern const prog_uchar afsk_sine_table[];
+extern const unsigned char afsk_sine_table[] __ATTR_PROGMEM__;
 
 // Inline functions (this saves precious cycles in the ISR)
 #if AUDIO_PIN == 3
