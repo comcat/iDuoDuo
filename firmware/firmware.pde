@@ -91,7 +91,9 @@ void setup()
 
   buzzer_setup();
   afsk_setup();
+
   gps_setup();
+
   //sensors_setup();
 
 #ifdef DEBUG_SENS
@@ -107,6 +109,7 @@ void setup()
   // for slotted transmissions.
   if (APRS_SLOT >= 0) {
 
+#ifndef DISABLE_GPS
     gps_power_on();
     
     do {
@@ -118,6 +121,7 @@ void setup()
     
     next_aprs = millis() + 1000 *
       (APRS_PERIOD - (gps_seconds + APRS_PERIOD - APRS_SLOT) % APRS_PERIOD);
+#endif
   }
   else {
     next_aprs = millis();
@@ -154,7 +158,9 @@ void loop()
 {
   // Time for another APRS frame
   if ((int32_t) (millis() - next_aprs) >= 0) {
+#ifndef DISABLE_GPS
     get_pos();
+#endif
     aprs_send();
     next_aprs += APRS_PERIOD * 1000L;
     //while (afsk_busy()) ;

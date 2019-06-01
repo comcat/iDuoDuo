@@ -18,6 +18,7 @@
 #ifndef __CONFIG_H__
 #define __CONFIG_H__
 
+#define	DISABLE_GPS		1
 
 // --------------------------------------------------------------------------
 // THIS IS THE TRACKUINO FIRMWARE CONFIGURATION FILE. YOUR CALLSIGN AND
