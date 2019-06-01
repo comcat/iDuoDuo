@@ -1,15 +1,26 @@
-iGoGo - Pet APRS Tracker
+iDuoDuo - Pet APRS Tracker
 =======================================
 
-![iGoGo Board V0.4](hardware/V0.4/iGoGo-APRS-Tracker-layout.png)
+![iDuoDuo Board V0.4](hardware/V0.4/iDuoDuo-APRS-Tracker-layout.png)
 
-[*iGoGo Board*](http://jackslab.org/)
+![My DuoDuo](doc/iDuoDuo.jpg)
+
+![iDuoDuo prototype](doc/iDuoDuo-00.jpg)
+
+![iDuoDuo V0.4](doc/iDuoDuo-01.jpg)
+
+![iDuoDuo V0.4](doc/iDuoDuo-02.jpg)
+
+![iDuoDuo V0.4](doc/iDuoDuo-03.jpg)
+
+
+[*iDuoDuo Board*](http://jackslab.org/)
 
 
 Features
 -------------------
 * ATMEGA328p MCU, Arduino compatible
-* 1W VHF radio module
+* 1W VHF radio module ([SR_FRS_1WV](https://item.taobao.com/item.htm?id=21278567784))
 * 1200 bauds AFSK using 8-bit PWM
 * Sends out standard APRS position messages
 * mini GPS module
@@ -19,7 +30,7 @@ Features
 
 Pin map
 -------------------
-iGoGo board
+iDuoDuo board
 
 * D3 is the audio out pin
 * D4 is the PTT pin
@@ -32,15 +43,15 @@ iGoGo board
 
 Repository Contents
 -------------------
-* hardware/ - All Eagle design files (.brd, .sch) and Gerber files of iGoGo Board 
-* firmware/ - Firmware source files of the iGoGo
+* hardware/ - All Eagle design files (.brd, .sch) and Gerber files of iDuoDuo Board 
+* firmware/ - Firmware source files of the iDuoDuo
 
 
 Product Versions
 ----------------
-* [IGOGO-001](http://www.jackslab.org/) - Bare pcb.
-* [IGOGO-002](http://www.jackslab.org/) - Geek Kit. Bare pcb plus chips, stackable headers, indicator LEDs, push buttons and resistors ...
-* [IGOGO-003](http://www.jackslab.org/) - Complete iGoGo board.
+* [IDuoDuo-001](http://www.jackslab.org/) - Bare pcb.
+* [IDuoDuo-002](http://www.jackslab.org/) - Geek Kit. Bare pcb plus chips, stackable headers, indicator LEDs, push buttons and resistors ...
+* [IDuoDuo-003](http://www.jackslab.org/) - Complete iDuoDuo board.
 
 
 License Information
