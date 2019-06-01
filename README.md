@@ -22,7 +22,7 @@ More photo of My DuoDuo :) [My DuoDuo Life](http://comcat.lofter.com/tag/%E5%A4%
 Features
 -------------------
 * ATMEGA328p MCU, Arduino compatible
-* 1W VHF radio module ([SR_FRS_1WV](https://item.taobao.com/item.htm?id=21278567784))
+* 1W VHF radio module, low cost, about $5 ([SR_FRS_1WV](https://item.taobao.com/item.htm?id=21278567784))
 * 1200 bauds AFSK using 8-bit PWM
 * Sends out standard APRS position messages
 * mini GPS module
